@@ -4,7 +4,7 @@ if (file_exists('source.xml')) {
     if (isset($_GET['page'])) {
         $pageNumber = intval(htmlspecialchars($_GET['page'])); //intval — Retourne la valeur numérique entière équivalente d'une variable
     } else {
-        $pageNumber = 0; 
+        $pageNumber = 0;
     }
     $pageNumberMax = count($xml->page);
     if ($pageNumber >= $pageNumberMax) {
@@ -27,14 +27,14 @@ if (file_exists('source.xml')) {
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <?php
         for ($i = 0; $i < $pageNumberMax; $i++) {
             $menu = $xml->page[$i]->menu;
-            $display = '<a class="nav-link ml-5" href="index.php?page=' . $i . '">' . $menu . '</a>';
+            $display = '<div class="collapse navbar-collapse" id="navbarToggler"><a class="nav-link me-auto"  href="index.php?page=' . $i . '">' . $menu . '</a></div>';
             echo $display;
         }
         ?>
