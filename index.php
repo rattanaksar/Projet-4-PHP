@@ -14,7 +14,9 @@ if (file_exists(XML_SOURCE_FILE))
         // C'est la première fois que le script est lancé. On prend la page d'acceuil par défaut
         $pageNumber= 0;
     }
+    // Lecture du fichier XML
     $xmlFile= simplexml_load_file(XML_SOURCE_FILE);
+    // En extraire le numbre de pages
     $pageNumberMax= count($xmlFile->page);
     if ($pageNumber >= $pageNumberMax)
     {
@@ -38,9 +40,8 @@ else
         <title><?= $title ?></title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar sticky-top navbar-expand navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
             </button>
             <?php
                 for ($i = 0; $i < $pageNumberMax; $i++) 
