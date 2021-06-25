@@ -58,5 +58,6 @@ else
         <!-- Affichage du contenu correspondant à la page souhaitée -->
         <div class="container content-page">
             <?= $xml->page[$pageIdx]->content; ?>
+        </div>
 </body>
 </html>
