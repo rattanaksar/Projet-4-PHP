@@ -1,69 +1,63 @@
-
 <?php
-// The file test.xml contains an XML document with a root element
-// and at least an element /[root]/title.
-/*
-SimpleXMLElement Object ( [page] => Array ( [0] => SimpleXMLElement Object ( [@attributes] => Array ( [id] => 1 ) [menu] => Accueil [title] => Accueil - Maçonnerie Ocordo [content] => SimpleXMLElement Object ( ) ) [1] => SimpleXMLElement Object ( [@attributes] => Array ( [id] => 2 ) [menu] => Qui sommes nous? [title] => En apprendre plus sur nous - Maçonnerie Ocordo [content] => SimpleXMLElement Object ( ) ) [2] => SimpleXMLElement Object ( [@attributes] => Array ( [id] => 3 ) [menu] => Nos clients témoignent [title] => Avis clients - Maçonnerie Ocordo [content] => SimpleXMLElement Object ( ) ) [3] => SimpleXMLElement Object ( [@attributes] => Array ( [id] => 4 ) [menu] => Contact [title] => Contactez nous - Maçonnerie Ocordo [content] => SimpleXMLElement Object ( ) ) ) ) 
-
-D:\z_LaManu\website\c_2021_06_09_PHP\php_projet_commun\index.php:11:
-object(SimpleXMLElement)[1]
-  public 'page' => 
-    array (size=4)
-      0 => 
-        object(SimpleXMLElement)[5]
-          public '@attributes' => 
-            array (size=1)
-              ...
-          public 'menu' => string 'Accueil' (length=7)
-          public 'title' => string 'Accueil - Maçonnerie Ocordo' (length=28)
-          public 'content' => 
-            object(SimpleXMLElement)[6]
-              ...
-      1 => 
-        object(SimpleXMLElement)[4]
-          public '@attributes' => 
-            array (size=1)
-              ...
-          public 'menu' => string 'Qui sommes nous?' (length=16)
-          public 'title' => string 'En apprendre plus sur nous - Maçonnerie Ocordo' (length=47)
-          public 'content' => 
-            object(SimpleXMLElement)[6]
-              ...
-      2 => 
-        object(SimpleXMLElement)[3]
-          public '@attributes' => 
-            array (size=1)
-              ...
-          public 'menu' => string 'Nos clients témoignent' (length=23)
-          public 'title' => string 'Avis clients - Maçonnerie Ocordo' (length=33)
-          public 'content' => 
-            object(SimpleXMLElement)[6]
-              ...
-      3 => 
-        object(SimpleXMLElement)[2]
-          public '@attributes' => 
-            array (size=1)
-              ...
-          public 'menu' => string 'Contact' (length=7)
-          public 'title' => string 'Contactez nous - Maçonnerie Ocordo' (length=35)
-          public 'content' => 
-            object(SimpleXMLElement)[6]
-              ...
-*/
-if (file_exists('source.xml')) {
-    $xml = simplexml_load_file('source.xml');
-    //print_r($xml);
-    //var_dump($xml);
-    echo "@attributes: <br>";
-    foreach($xml->page[0]->attributes() as $attributName => $attributeValue) 
+// Le fichier source DOIT être accessible
+if (file_exists('source.xml')) 
+{
+    // Il est !
+    $xml= simplexml_load_file('source.xml');
+    // Si page est présent c'est que l'utilisateur à cliquer sur une option
+    if (isset($_GET['page']))
     {
-        echo $attributName,'="',$attributeValue,"\"<br>";
+        $pageIdx = intval(htmlspecialchars($_GET['page']));
+        $xml= simplexml_load_file('source.xml');
+        $count= count($xml->page);
+        if ($pageIdx >= $count)
+        {
+            echo 'Numéro de page inconnu';
+            exit();        
+        }
+    } 
+    else 
+    {
+        // C'est la première fois que le script est lancé. On prend la page d'acceuil par défaut
+        $pageIdx= 0;
     }
-    //var_dump($xml->page[0]->attributes );
-    echo "menu: ".$xml->page[0]->menu."<br>";
-    echo "title: ".$xml->page[0]->title."<br>";
-    echo "content: ".$xml->page[0]->content."<br>";
-} else {
-    exit('Failed to open source.xml.');
+    // préparons le titre de la page qui sera affiché
+    $title= $xml->page[$pageIdx]->title;
+}
+else
+{
+    // Oops !
+    echo 'Pas de fichier source.xml';
+    exit();
 }
 ?>
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+         <link rel="stylesheet" href="/assets/css/style.css" />
+        <title><?= $title; ?></title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <?php
+                for ($i = 0; $i != $count; $i++) 
+                {
+                    $menu = $xml->page[$i]->menu;
+                    $display= '<a class="navbar-brand ml-5" href="index.php?page='.$i.'">'.$menu.'</a>';
+                    echo $display;
+                }
+            ?>        
+        </nav>
+        <!-- Affichage du contenu correspondant à la page souhaitée -->
+        <div class="container content-page">
+            <?= $xml->page[$pageIdx]->content; ?>
+        </div>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </div>
+</body>
+</html>
