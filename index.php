@@ -6,12 +6,12 @@ if (file_exists('source.xml')) {
     } else {
         $pageNumber = 0;
     }
-    $pageNumberMax = count($xml->page);
+    $pageNumberMax = count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
     if ($pageNumber >= $pageNumberMax) {
         echo 'Numéro de page inconnu';
         exit();
     }
-    $title = $xml->page[$pageNumber]->title;
+    $title = $xml->page[0]->title;
 } else {
     echo 'Pas de fichier source.xml';
     exit();
@@ -27,15 +27,21 @@ if (file_exists('source.xml')) {
 </head>
 
 <body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-light navbar-expand-lg mb-5 fs-5" style="background-color: #FFF3CD;">
+
+        <a class="navbar-brand ms-5" href="index.php?page=0">
+            <img src="assets/img/logo.png" alt="logo Ocordo" width="100" height="100">
+        </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- on génère les différentes pages du site -->
         <?php
         for ($i = 0; $i < $pageNumberMax; $i++) {
             $menu = $xml->page[$i]->menu;
-            $display = '<div class="collapse navbar-collapse" id="navbarToggler"><a class="nav-link me-auto"  href="index.php?page=' . $i . '">' . $menu . '</a></div>';
-            echo $display;
+            $displayPages = '<div class="collapse navbar-collapse" id="navbarToggler"><a class="nav-link text-secondary ms-5" href="index.php?page=' . $i . '">' . $menu . '</a></div>';
+            echo $displayPages;
         }
         ?>
     </nav>
