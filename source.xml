@@ -10,15 +10,12 @@
 		<content>
 			<![CDATA[
 			<h1 class="text-center py-4 default_banner_color">Maçonnerie Ocordo</h1>
-			<div class = "my-4">
-			<p class="lead">Nous sommes un groupement permanent d’entreprises locales du bâtiment spécialisées dans les travaux de rénovation de maisons et de construction d’extensions horizontales ou verticales de maisons.</p>
+			<p class="lead my-4">Nous sommes un groupement permanent d’entreprises locales du bâtiment spécialisées dans les travaux de rénovation de maisons et de construction d’extensions horizontales ou verticales de maisons.</p>
 			<p class="lead">Nous sommes capables de gérer un projet de rénovation ou d’extension de A à Z grâce à nos entreprises générales de bâtiment partenaires.</p>
 			<p class="lead mb-5">Nous pouvons assurer tous vos travaux de tout corps d’état.</p>
-			</div>
 			<hr class="defaut_bg_color">
 			<h2 class="text-center fw-lighter py-5 defaut_bg_color">Nos dernières réalisations à Nantes</h2>
-			<div class="gallery_box_single container-fluid px-5 mb-5">
-			<div class="row justify-content-between">
+			<div class="gallery_box_single container-fluid px-5 mb-5 row justify-content-between">
 			<div class="col-4">
 			<img src="assets/img/Renovation-appartement-nantes-ocordo-travaux-300-225.jpg" class="w-200" alt="Rénovation d'un appartement à Nantes" />
 			<p class="caption-text fst-italic">Rénovation d'un appartement à Nantes</p>
