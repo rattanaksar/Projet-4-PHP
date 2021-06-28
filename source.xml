@@ -28,7 +28,6 @@
 			<img src="assets/img/entreprise-de-renovation-OCORDO-300-225.jpg" alt="Rénovation d'une maison à Nantes"/>
 			<p class="caption-text fst-italic">Rénovation d'une maison à Nantes</p>
 			</div>
-			</div>
 			<div class="row justify-content-evenly mt-4">
 			<div class="col-4">
 			<img src="assets/img/renovation-appartement-nantes-300-225.jpg" alt="Travaux de rénovation dans un appartement à Nantes"/>
@@ -38,9 +37,7 @@
 			<img src="assets/img/societe-de-renovation-a-nantes-2.jpg" alt="Rénovation d'un appartement à Nantes"/>
 			<p class="caption-text fst-italic">Rénovation d'un appartement à Nantes</p>
 			</div>
-			</div>
-			</div>
-			</div>
+
 			]]>
 		</content>
 	</page>
