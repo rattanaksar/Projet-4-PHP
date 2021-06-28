@@ -1,22 +1,24 @@
 <?php
-if (file_exists('source.xml')) {
-    $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
-    if (isset($_GET['page'])) {
-        $pageNumber = intval(htmlspecialchars($_GET['page'])); //intval — Retourne la valeur numérique entière équivalente d'une variable
+    if (file_exists('source.xml')) {
+        $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
+        if (isset($_GET['page'])) {
+            $pageNumber = intval(htmlspecialchars($_GET['page'])); //intval — Retourne la valeur numérique entière équivalente d'une variable
+        } else {
+            $pageNumber = 0;
+        }
+        $pageNumberMax = count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
+        if ($pageNumber >= $pageNumberMax) {
+            echo 'Numéro de page inconnu';
+            exit();
+        }
+        $title = $xml->page[0]->title;
     } else {
-        $pageNumber = 0;
-    }
-    $pageNumberMax = count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
-    if ($pageNumber >= $pageNumberMax) {
-        echo 'Numéro de page inconnu';
+        echo 'Pas de fichier source.xml';
         exit();
     }
-    $title = $xml->page[0]->title;
-} else {
-    echo 'Pas de fichier source.xml';
-    exit();
-}
 ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -28,7 +30,7 @@ if (file_exists('source.xml')) {
 </head>
 
 <body>
-    <nav class="navbar sticky-top navbar-light navbar-expand-lg mb-5 fs-5" style="background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);">
+    <nav class="navbar sticky-top navbar-light navbar-expand-lg mb-5 fs-5" style="background-image: linear-gradient(to right, #F09819 0%, #EDDE5D  51%, #F09819  100%);">
 
         <a class="navbar-brand ms-5" href="index.php?page=0">
             <img src="assets/img/logo.png" alt="logo Ocordo" width="100" height="100">
