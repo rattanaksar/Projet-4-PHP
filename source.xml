@@ -9,7 +9,7 @@
 		</title>
 		<content>
 			<![CDATA[
-			<h1 class="text-center py-4" style="color:linear-gradient(62deg, #FBAB7E 0%, #F7CE68 66%)">Maçonnerie Ocordo</h1>
+			<h1 class="text-center py-4 default_banner_color">Maçonnerie Ocordo</h1>
 			<div class = "my-4">
 			<p class="lead">Nous sommes un groupement permanent d’entreprises locales du bâtiment spécialisées dans les travaux de rénovation de maisons et de construction d’extensions horizontales ou verticales de maisons.</p>
 			<p class="lead">Nous sommes capables de gérer un projet de rénovation ou d’extension de A à Z grâce à nos entreprises générales de bâtiment partenaires.</p>

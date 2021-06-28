@@ -14,3 +14,7 @@
 {
     background-color:#F7B755;
 }
+.default_banner_color
+{
+    color:linear-gradient(62deg, #FBAB7E 0%, #F7CE68 66%);
+}
