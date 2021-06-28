@@ -29,7 +29,7 @@
 </head>
 
 <body>
-    <nav class="navbar sticky-top navbar-light navbar-expand-lg mb-5 fs-5" style="background-image: linear-gradient(to right, #F09819 0%, #EDDE5D  51%, #F09819  100%);">
+    <nav class="navbar sticky-top navbar-light navbar-expand-lg mb-5 fs-5 default_bg_color">
 
         <a class="navbar-brand ms-5" href="index.php?page=0">
             <img src="assets/img/logo.png" alt="logo Ocordo" width="100" height="100">

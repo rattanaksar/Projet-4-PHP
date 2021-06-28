@@ -18,3 +18,7 @@
 {
     color:linear-gradient(62deg, #FBAB7E 0%, #F7CE68 66%);
 }
+.default_bg_color
+{
+    background-image: linear-gradient(to right, #F09819 0%, #EDDE5D  51%, #F09819  100%);
+}
