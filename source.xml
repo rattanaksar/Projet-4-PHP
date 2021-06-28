@@ -128,9 +128,9 @@
 			<h2 class="fs-4 fst-italic">Rénovation transformation</h2>
 			</div>
 			<div class="card-body">
-			<blockquote class="blockquote mb-0">
-			<p>Transformation rénovation d’un garage et refaire les murs ( placo), l’electricité (prises, eclairage leds ),le sol ( carrelage), les peintures et changement d’une porte-fenêtre. Devis: précis et rapide Prestations au rythme convenu, réalisation des travaux sans failles, très bonnes prestation Chantier: propreté absolue et nettoyage complet à la fin. Bémol : 2 jours de retard à cause du retard de livraison de la fenêtre, mais vraiment pas grave. Prix: très raisonnable Je recommande Ocordo pour l’efficacité du travail réalisé en amont: devis, tarifs. Ils connaissent le travail.</p>			
-			<footer class="blockquote-footer">BrunoPH</footer>
+			<blockquote class="blockquote">
+			<p>Transformation rénovation d’un garage et refaire les murs ( placo), l’electricité (prises, eclairage leds ),le sol ( carrelage), les peintures et changement d’une porte-fenêtre. Devis: précis et rapide Prestations au rythme convenu, réalisation des travaux sans failles, très bonnes prestation Chantier: propreté absolue et nettoyage complet à la fin. Bémol : 2 jours de retard à cause du retard de livraison de la fenêtre, mais vraiment pas grave. Prix: très raisonnable Je recommande Ocordo pour l’efficacité du travail réalisé en amont: devis, tarifs. Ils connaissent le travail.</p>
+			<footer class="blockquote-footer mt-3">BrunoPH</footer>
 			</blockquote>
 			</div>
 			</div>
@@ -140,9 +140,9 @@
 			<h2 class="fs-4 fst-italic">Sérieux</h2>
 			</div>
 			<div class="card-body">
-			<blockquote class="blockquote mb-0">
+			<blockquote class="blockquote">
 			<p>Nous sommes satisfait du travail de cette entreprise qui a rénové notre maison quand nous sommes arrivés à lille. il y avait tout a rénové et leur commercial a su nous consacrer du temps pour nous proposer un projet qui convenait à notre gout et à notre budget. les travaux ont été bien fait à part un petit détail au niveau de la fourniture de la robineterie de la cuisine mais sans gravité</p>
-			<footer class="blockquote-footer">PJ9e7S9L</footer>
+			<footer class="blockquote-footer mt-3">PJ9e7S9L</footer>
 			</blockquote>
 			</div>
 			</div>
@@ -158,28 +158,37 @@
 		</title>
 		<content>
 			<![CDATA[
-			<h1>Contact et Devis</h1>
-			<p><iframe style="border: 0; float: right;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10840.441212216989!2d-1.562078!3d47.214424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x10a23dc1d980bca7!2sOcordo+Travaux+Nantes!5e0!3m2!1sfr!2sfr!4v1434122059096" width="600" height="450" frameborder="0"></iframe></p>
-			<p>POUR OBTENIR UN DEVIS GRATUIT 3 POSSIBILITÉS :</p>
+			<h1 class="text-center py-4" style="color:#ED8105">Contact et Devis</h1>
+			<p class="fs-3">POUR OBTENIR UN DEVIS GRATUIT 3 POSSIBILITÉS :</p>
 			<ul>
 			<li>Téléphonez-nous au 02.51.84.18.24</li>
 			<li>Ou écrivez-nous à cette adresse email : contact@ocordo-travaux.fr</li>
 			<li>Ou compétez le formulaire ci-dessous :</li>
 			</ul>
-			<div role="form">
+			
+			<div role="form" class="container">
+			<div class="row">
+			<div class="col-2">
 			<form action="#" method="post" class="form" novalidate="novalidate">
-			<label>Votre nom * :</label><input name="your-name" value="" size="40" class="form-control text validates-as-required" type="text">
-			<label>Votre email :</label><input name="your-email" value="" size="40" class="form-control text email validates-as-email"  type="email">
-			<label>Votre numéro de téléphone * :</label>
+			<label class="form-label">Votre nom * :</label><input name="your-name" value="" size="40" class="form-control text validates-as-required" type="text">
+			<label class="form-label">Votre email :</label><input name="your-email" value="" size="40" class="form-control text email validates-as-email"  type="email">
+			<label class="form-label">Votre numéro de téléphone * :</label>
 			<input name="your-tel-615" value="" size="40" class="form-control text tel validates-as-required validates-as-tel"   type="tel">
-			<label>Sujet :</label>
+			</div>
+			<div class="col-2">
+			<label class="form-label">Sujet :</label>
 			<input name="your-subject" value="" size="40" class="form-control text"  type="text">
-			<label>Votre ville :</label>
+			<label class="form-label">Votre ville :</label>
 			<input name="your-ville" value="" size="40" class="form-control text"  type="text">
-			<label>Votre message * :</label>
+			<label class="form-label">Votre message * :</label>
 			<textarea name="your-message" cols="40" rows="10" class="form-control textarea validates-as-required"  ></textarea>
-			<input type="submit" name="send" value="Envoyer"/>
+			<input type="submit" class="btn btn-outline-warning" name="send" value="Envoyer"/>
+			</div>
 			</form>
+			</div>
+			
+			<div class="col-6"><iframe 	src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10840.441212216989!2d-1.562078!3d47.214424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x10a23dc1d980bca7!2sOcordo+Travaux+Nantes!5e0!3m2!1sfr!2sfr!4v1434122059096" width="600" height="450" frameborder="2"></iframe></div>
+			</div>
 			</div>
 			]]>
 		</content>
