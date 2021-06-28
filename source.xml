@@ -9,7 +9,7 @@
 		</title>
 		<content>
 			<![CDATA[
-			<h1 class="text-center py-4" style="color:#ED8105">Maçonnerie Ocordo</h1>
+			<h1 class="text-center py-4" style="color:linear-gradient(62deg, #FBAB7E 0%, #F7CE68 66%)">Maçonnerie Ocordo</h1>
 			<div class = "my-4">
 			<p class="lead">Nous sommes un groupement permanent d’entreprises locales du bâtiment spécialisées dans les travaux de rénovation de maisons et de construction d’extensions horizontales ou verticales de maisons.</p>
 			<p class="lead">Nous sommes capables de gérer un projet de rénovation ou d’extension de A à Z grâce à nos entreprises générales de bâtiment partenaires.</p>
@@ -27,7 +27,7 @@
 			<p class="caption-text fst-italic">Rénovation d'un appartement à Nantes</p></div>
 			<div class="col-2">
 			<img src="assets/img/Travaux-de-renovation-a-nantes-300-225.jpg" alt="Aménagement de comble à Nantes"/>
-			<p class="caption-text fst-italic">Aménagement de comble à Nantes</p>
+			<p class="caption-text fst-italic ">Aménagement de comble à Nantes</p>
 			</div>
 			<div class="col-4">
 			<img src="assets/img/entreprise-de-renovation-OCORDO-300-225.jpg" alt="Rénovation d'une maison à Nantes"/>
