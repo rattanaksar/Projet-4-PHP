@@ -9,12 +9,10 @@ if (file_exists('source.xml')) {
     $pageNumberMax = count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
     if ($pageNumber >= $pageNumberMax) {
         echo 'Numéro de page inconnu';
-        exit();
     }
     $title = $xml->page[0]->title;
 } else {
     echo 'Pas de fichier source.xml';
-    exit();
 }
 ?>
 
@@ -34,23 +32,22 @@ if (file_exists('source.xml')) {
         <a class="navbar-brand ms-5" href="index.php?page=0">
             <img src="assets/img/logo.png" alt="logo Ocordo" width="100" height="100">
         </a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- on génère les différentes pages du site -->
         <?php
         for ($i = 0; $i < $pageNumberMax; $i++) {
-            $menu = $xml->page[$i]->menu;
-            $displayPages = '<div class="collapse navbar-collapse" id="navbarToggler"><a class="nav-link text-secondary ms-5" href="index.php?page=' . $i . '">' . $menu . '</a></div>';
-            echo $displayPages;
-        }
-        ?>
+            $menu = $xml->page[$i]->menu; ?>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <a class="nav-link text-secondary ms-5" href="index.php?page=<?= $i ?>"><?= $menu ?></a>
+            </div>
+        <?php
+        } ?>
     </nav>
-    <div class="container content-page">
+    <div class=" container content-page">
         <?= $xml->page[$pageNumber]->content; ?>
     </div>
-    <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
