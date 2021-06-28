@@ -15,17 +15,17 @@
 			<p class="lead">Nous sommes capables de gérer un projet de rénovation ou d’extension de A à Z grâce à nos entreprises générales de bâtiment partenaires.</p>
 			<p class="lead mb-5">Nous pouvons assurer tous vos travaux de tout corps d’état.</p>
 			</div>
-			<hr style="color:#ED8105">
+			<hr class="defaut_bg_color">
 			
-			<h2 class="text-center fw-lighter py-5" style="color:#ED8105">Nos dernières réalisations à Nantes</h2>
+			<h2 class="text-center fw-lighter py-5 defaut_bg_color">Nos dernières réalisations à Nantes</h2>
 			<div class="gallery_box_single container-fluid px-5">
 			<div class="row justify-content-between">
-			<div class="col-2">
+			<div class="col-4">
 			<div class="bg-image hover-zoom">
 			<img src="assets/img/Renovation-appartement-nantes-ocordo-travaux-300-225.jpg" class="w-200" alt="Rénovation d'un appartement à Nantes" />
 			</div>
 			<p class="caption-text fst-italic">Rénovation d'un appartement à Nantes</p></div>
-			<div class="col-2">
+			<div class="col-4">
 			<img src="assets/img/Travaux-de-renovation-a-nantes-300-225.jpg" alt="Aménagement de comble à Nantes"/>
 			<p class="caption-text fst-italic ">Aménagement de comble à Nantes</p>
 			</div>
@@ -59,16 +59,16 @@
 		</title>
 		<content>
 			<![CDATA[
-			<h1 class="text-center py-4" style="color:#ED8105">Qui sommes-nous?</h1>
+			<h1 class="text-center py-4 defaut_bg_color">Qui sommes-nous?</h1>
 			<h2 class="text-center py-5">L’AGENCE DE TRAVAUX OCORDO</h2>
-			<h3 class="fs-2" style="color:#ED8105">Présentation de notre entreprise</h3>
-			<p class="lead ">Nous sommes un groupement permanent d’entreprises locales du bâtiment spécialisées dans les travaux de rénovation d’appartements et de maisons et de construction d’extensions horizontale ou verticale de maisons.</p><p class="lead mb-5 fst-italic fw-bolder" style="color:#EE9741">
+			<h3 class="fs-2 defaut_bg_color">Présentation de notre entreprise</h3>
+			<p class="lead ">Nous sommes un groupement permanent d’entreprises locales du bâtiment spécialisées dans les travaux de rénovation d’appartements et de maisons et de construction d’extensions horizontale ou verticale de maisons.</p><p class="lead mb-5 fst-italic fw-bolder default_card_color">
 			Nous travaillons exclusivement pour les particuliers.</p>
-			<div class="mx-auto" style="width: 400px;"><p><iframe src="https://www.youtube.com/embed/Crh5lFpNK0o?feature=oembed" allowfullscreen="" width="500" height="281" frameborder="0"></iframe></p></div>
-			<hr class="mt-5" style="color:#ED8105">
+			<div class="mx-auto default_video_width"><p><iframe src="https://www.youtube.com/embed/Crh5lFpNK0o?feature=oembed" allowfullscreen="" width="500" height="281" frameborder="0"></iframe></p></div>
+			<hr class="mt-5 defaut_bg_color">
 			<div class="container-fluid my-5">
 			<div class="row">
-			<p class="lead text-center card-header p-3" style="color:#EE9741">Notre groupement est en mesure de vous proposer les compétences métier dans le gros oeuvre et le second oeuvre :</p>
+			<p class="lead text-center card-header p-3 default_card_color">Notre groupement est en mesure de vous proposer les compétences métier dans le gros oeuvre et le second oeuvre :</p>
 			<div class="card col p-3">
 			<ul class="list-group list-group-flush">
 			<li class="list-group-item list-group-item-action list-group-item-warning">Maçonnerie générale</li>
@@ -89,7 +89,7 @@
 			</div>
 			</div>
 			</div>
-			<hr class="mt-5" style="color:#ED8105">
+			<hr class="mt-5 defaut_bg_color">
 			
 			<p>Nous sommes aujourd’hui 7 groupements implantés à Lille, Reims, Amiens, Arras, Strasbourg, Nantes et Bordeaux.</p><p>
 			
@@ -121,10 +121,10 @@
 		</title>
 		<content>
 			<![CDATA[
-			<h1 class="text-center py-4" style="color:#ED8105">Nos clients témoignent</h1>
+			<h1 class="text-center py-4 defaut_bg_color">Nos clients témoignent</h1>
 			
 			<div class="card my-5">
-			<div class="card-header" style="background-color:#F7B755;">
+			<div class="card-header default_card_header">
 			<h2 class="fs-4 fst-italic">Rénovation transformation</h2>
 			</div>
 			<div class="card-body">
@@ -136,7 +136,7 @@
 			</div>
 			
 			<div class="card my-5">
-			<div class="card-header" style="background-color:#F7B755">
+			<div class="card-header default_card_header">
 			<h2 class="fs-4 fst-italic">Sérieux</h2>
 			</div>
 			<div class="card-body">
@@ -158,7 +158,7 @@
 		</title>
 		<content>
 			<![CDATA[
-			<h1 class="text-center py-4" style="color:#ED8105">Contact et Devis</h1>
+			<h1 class="text-center py-4 defaut_bg_color">Contact et Devis</h1>
 			<p class="fs-3">POUR OBTENIR UN DEVIS GRATUIT 3 POSSIBILITÉS :</p>
 			<ul>
 			<li>Téléphonez-nous au 02.51.84.18.24</li>
