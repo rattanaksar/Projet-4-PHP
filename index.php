@@ -2,7 +2,6 @@
 
 if (file_exists('source.xml')) {
     $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
-    print_r($xml);
     if (isset($_GET['page'])) {
         $pageNumber = intval(htmlspecialchars($_GET['page'])); //intval — Retourne la valeur numérique entière équivalente d'une variable
     } else {

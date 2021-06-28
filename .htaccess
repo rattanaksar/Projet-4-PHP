@@ -1,5 +1,10 @@
-RewriteEngine on
+RewriteEngine on 
+# Ceci active le module de ré-écriture.
 RewriteBase /
+# Cette ligne permet d’indiquer la racine du site, en général, la racine du site n’est pas la racine du serveur.
 RewriteCond %{REQUEST_URI} !^/controleur/*
+# J’ai placé cette ligne pour information, elle permet d’exclure un sous-dossier des règles d’écriture.
 RewriteCond %{REQUEST_FILENAME} !-f
+# Il s’agit d’une condition préalable primordiale pour la bonne éxecution de la ré-écriture, elle indique qu’il ne s’agit pas d’un fichier réel.
 RewriteRule ^(.*)$ index.php [QSA,L]
+# Il s’agit la règle qui renvoie les adresses correspondant aux conditions vers la page index. QSA indique que les paramètres sont passés comme arguments.
