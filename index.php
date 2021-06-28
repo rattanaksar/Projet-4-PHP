@@ -27,7 +27,7 @@ if (file_exists('source.xml')) {
 </head>
 
 <body>
-    <nav class="navbar sticky-top navbar-light navbar-expand-lg mb-5 fs-5" style="background-color: #FFF3CD;">
+    <nav class="navbar sticky-top navbar-light navbar-expand-lg mb-5 fs-5" style="background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);">
 
         <a class="navbar-brand ms-5" href="index.php?page=0">
             <img src="assets/img/logo.png" alt="logo Ocordo" width="100" height="100">
