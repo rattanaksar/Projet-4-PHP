@@ -16,16 +16,13 @@
 			<p class="lead mb-5">Nous pouvons assurer tous vos travaux de tout corps d’état.</p>
 			</div>
 			<hr style="color:#ED8105">
-			
 			<h2 class="text-center fw-lighter py-5" style="color:#ED8105">Nos dernières réalisations à Nantes</h2>
-			<div class="gallery_box_single container-fluid px-5">
-			<div class="row justify-content-between">
-			<div class="col-2">
-			<div class="bg-image hover-zoom">
+			<div class="gallery_box_single container-fluid px-5 mb-5">
+			<div class="row justify-content-between ">
+			<div class="col-4">
 			<img src="assets/img/Renovation-appartement-nantes-ocordo-travaux-300-225.jpg" class="w-200" alt="Rénovation d'un appartement à Nantes" />
-			</div>
 			<p class="caption-text fst-italic">Rénovation d'un appartement à Nantes</p></div>
-			<div class="col-2">
+			<div class="col-4">
 			<img src="assets/img/Travaux-de-renovation-a-nantes-300-225.jpg" alt="Aménagement de comble à Nantes"/>
 			<p class="caption-text fst-italic">Aménagement de comble à Nantes</p>
 			</div>
@@ -34,7 +31,6 @@
 			<p class="caption-text fst-italic">Rénovation d'une maison à Nantes</p>
 			</div>
 			</div>
-			
 			<div class="row justify-content-evenly mt-4">
 			<div class="col-4">
 			<img src="assets/img/renovation-appartement-nantes-300-225.jpg" alt="Travaux de rénovation dans un appartement à Nantes"/>
@@ -89,13 +85,10 @@
 			</div>
 			</div>
 			</div>
-			<hr class="mt-5" style="color:#ED8105">
-			
-			<p>Nous sommes aujourd’hui 7 groupements implantés à Lille, Reims, Amiens, Arras, Strasbourg, Nantes et Bordeaux.</p><p>
-			
+			<hr class="mt-5" style="color:#ED8105">	
+			<p>Nous sommes aujourd’hui 7 groupements implantés à Lille, Reims, Amiens, Arras, Strasbourg, Nantes et Bordeaux.</p><p>	
 			Quels sont les avantages en travaillant avec notre groupement ? Simplicité, Sécurité et Prix</p><p>
-			Pourquoi la Simplicité ? Parce que vous avez un seul interlocuteur qui est disponible de la préparation au chiffrage de l’ensemble de vos travaux.</p><p>
-			
+			Pourquoi la Simplicité ? Parce que vous avez un seul interlocuteur qui est disponible de la préparation au chiffrage de l’ensemble de vos travaux.</p><p>	
 			Pourquoi la Sécurité ? Par ce que pour élaborer votre projet de travaux de rénovation ou de construction d’extension nous :</p><p>
 			<ul>
 			<li>fixons un premier rendez-vous au cours duquel nous vous écoutons nous parlez de votre projet de travaux. À ce stade nous pouvons déjà vous conseiller.</li>
@@ -103,10 +96,8 @@
 			<li>vous remettons un dossier-devis comprenant les devis détaillés avec les dates prévisionnelles de début et de fin d’intervention,les assurances décennales et la RC professionnelle,</li>
 			<li>vous remettons un résumé pratique vous expliquant l’exécution de vos travaux.</li>
 			</ul>
-			<p>Toutes les entreprises du bâtiment de notre groupement travaillent en direct sans aucune sous traitance.</p>
-			
-			<p>Tous les travaux sont couverts par la garantie de parfait achèvement conformément aux règles en vigueur .</p>
-			
+			<p>Toutes les entreprises du bâtiment de notre groupement travaillent en direct sans aucune sous traitance.</p>		
+			<p>Tous les travaux sont couverts par la garantie de parfait achèvement conformément aux règles en vigueur .</p>		
 			<p>Pourquoi le Prix ? Nous avons professionnalisé notre organisation et mis en place des outils de gestion et d’organisation exclusifs. C’est pourquoi nous sommes en mesure de vous faire bénéficier de prix très compétitifs et d’un excellent rapport qualité/prix.<p>
 			bénéficier de prix très compétitifs et d’un excellent rapport qualité/prix pour vos travaux de rénovation.
 			]]>
@@ -159,6 +150,10 @@
 		<content>
 			<![CDATA[
 			<h1 class="text-center py-4" style="color:#ED8105">Contact et Devis</h1>
+			<div class="mx-auto" style="width: 600px;">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10840.441212216989!2d-1.562078!3d47.214424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x10a23dc1d980bca7!2sOcordo+Travaux+Nantes!5e0!3m2!1sfr!2sfr!4v1434122059096" width="600" height="450" frameborder="2"></iframe>
+			</div>
+			
 			<p class="fs-3">POUR OBTENIR UN DEVIS GRATUIT 3 POSSIBILITÉS :</p>
 			<ul>
 			<li>Téléphonez-nous au 02.51.84.18.24</li>
@@ -167,29 +162,27 @@
 			</ul>
 			
 			<div role="form" class="container">
-			<div class="row">
-			<div class="col-2">
+			<div class="row justify-content-center">
+			<div class="col-5">
 			<form action="#" method="post" class="form" novalidate="novalidate">
 			<label class="form-label">Votre nom * :</label><input name="your-name" value="" size="40" class="form-control text validates-as-required" type="text">
 			<label class="form-label">Votre email :</label><input name="your-email" value="" size="40" class="form-control text email validates-as-email"  type="email">
 			<label class="form-label">Votre numéro de téléphone * :</label>
-			<input name="your-tel-615" value="" size="40" class="form-control text tel validates-as-required validates-as-tel"   type="tel">
-			</div>
-			<div class="col-2">
-			<label class="form-label">Sujet :</label>
-			<input name="your-subject" value="" size="40" class="form-control text"  type="text">
+			<input name="your-tel-615" value="" size="40" class="form-control text tel validates-as-required validates-as-tel" type="tel">
 			<label class="form-label">Votre ville :</label>
 			<input name="your-ville" value="" size="40" class="form-control text"  type="text">
+			</div>
+			<div class="col-4">
+			<label class="form-label">Sujet :</label>
+			<input name="your-subject" value="" size="40" class="form-control text"  type="text">
 			<label class="form-label">Votre message * :</label>
-			<textarea name="your-message" cols="40" rows="10" class="form-control textarea validates-as-required"  ></textarea>
-			<input type="submit" class="btn btn-outline-warning" name="send" value="Envoyer"/>
+			<textarea name="your-message" cols="20" rows="10" class="form-control textarea validates-as-required" ></textarea>
+			<input type="submit" class="btn btn-outline-warning col-12 mt-3 mb-5" name="send" value="Envoyer"/>
 			</div>
 			</form>
 			</div>
 			
-			<div class="col-6"><iframe 	src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10840.441212216989!2d-1.562078!3d47.214424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x10a23dc1d980bca7!2sOcordo+Travaux+Nantes!5e0!3m2!1sfr!2sfr!4v1434122059096" width="600" height="450" frameborder="2"></iframe></div>
-			</div>
-			</div>
+			
 			]]>
 		</content>
 	</page>
