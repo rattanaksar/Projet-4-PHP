@@ -1,22 +1,24 @@
 <?php
-if (file_exists('source.xml')) {
-    $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
-    if (isset($_GET['page'])) {
-        $pageNumber = intval(htmlspecialchars($_GET['page'])); //intval — Retourne la valeur numérique entière équivalente d'une variable
+    if (file_exists('source.xml')) {
+        $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
+        if (isset($_GET['page'])) {
+            $pageNumber = intval(htmlspecialchars($_GET['page'])); //intval — Retourne la valeur numérique entière équivalente d'une variable
+        } else {
+            $pageNumber = 0;
+        }
+        $pageNumberMax = count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
+        if ($pageNumber >= $pageNumberMax) {
+            echo 'Numéro de page inconnu';
+            exit();
+        }
+        $title = $xml->page[0]->title;
     } else {
-        $pageNumber = 0;
-    }
-    $pageNumberMax = count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
-    if ($pageNumber >= $pageNumberMax) {
-        echo 'Numéro de page inconnu';
+        echo 'Pas de fichier source.xml';
         exit();
     }
-    $title = $xml->page[0]->title;
-} else {
-    echo 'Pas de fichier source.xml';
-    exit();
-}
 ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
