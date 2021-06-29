@@ -1,5 +1,17 @@
+# https://www.webhostingsecretrevealed.net/blog/web-hosting-guides/the-basics-of-htaccess/
 RewriteEngine On
 # Disable directory browsing
 Options -Indexes
+# Hotlink Protection: this occurs when other websites link to images that you are hosting. 
+#                     This is undesirable because they are making use of both your space as well as bandwidth
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://(www\.)example.com/.*$ [NC]
+RewriteRule \.(gif|jpg|jpeg|bmp)$ - [F]
+# protect .htaccess and .htpasswd
+#<Files ~ "^.*\.([Hh][Tt])">
+#Order allow,deny
+#Deny from all
+#Satisfy all
+#</Files>
 # Translate xx.html to id=xx
 RewriteRule ^([a-zA-Z0-9]*).html$ /index.php?id=$1 [L]
