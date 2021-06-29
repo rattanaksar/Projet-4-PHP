@@ -7,7 +7,6 @@ if (file_exists('source.xml'))
     if (isset($_GET['id'])) 
     {
         $idNumber = htmlspecialchars($_GET['id']);
-        echo $idNumber.'<br>';
         for ($i = 0; $i < $pageNumberMax; $i++)
         {
             if ($xml->page[$i]['id'] == $idNumber)
