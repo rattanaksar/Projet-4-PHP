@@ -1,7 +1,7 @@
 <?php
 if (file_exists('source.xml')) 
 {
-     $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
+    $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
     $pageNumberMax= count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
     $pageNumber= 0;
     $title='Ocordo';
@@ -9,14 +9,16 @@ if (file_exists('source.xml'))
     {
         $idNumber = htmlspecialchars($_GET['id']);
         $pageNumber= intval($idNumber) -1;
-    }
-    $pageNumberMax = count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
-    if ($pageNumber >= $pageNumberMax) {
-        echo 'Numéro de page inconnu';
-        exit();
+        if ($pageNumber >= $pageNumberMax) 
+        {
+            // Force la page d'acceuil !
+            $pageNumber= 0;
+        }
     }
     $title = $xml->page[$pageNumber]->title;
-} else {
+} 
+else 
+{
     echo 'Pas de fichier source.xml';
     exit();
 }
