@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (file_exists('source.xml')) 
 {
      $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
