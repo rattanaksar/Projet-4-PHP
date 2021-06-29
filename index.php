@@ -9,10 +9,7 @@ if (file_exists('source.xml'))
     if (isset($_GET['id'])) 
     {
         $idNumber = htmlspecialchars($_GET['id']);
-        if (isset($_SESSION[$idNumber]))
-        {
-            $pageNumber= $_SESSION[$idNumber];
-        }
+        $pageNumber= sprintf('%d',$idNumber) -1;
         $title = $xml->page[$pageNumber]->title;
     }
     else
@@ -51,14 +48,14 @@ if (file_exists('source.xml'))
         </button>
         <!-- on génère les différentes pages du site -->
         <?php
-        for ($i = 0; $i < $pageNumberMax; $i++) {
+        for ($i = 0; $i < $pageNumberMax; $i++) 
+        {
             $menu = $xml->page[$i]->menu; 
             $idValue= $xml->page[$i]['id']; ?>
             <div class="collapse navbar-collapse" id="navbarToggler">
                 <a class="nav-link text-secondary ms-5" href="<?= $idValue ?>.html"><?= $menu ?></a>
             </div>
         <?php
-        $_SESSION[sprintf('%s',$idValue)]= $i;
         } 
         ?>
     </nav>
