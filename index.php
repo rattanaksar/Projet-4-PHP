@@ -15,7 +15,6 @@ if (file_exists('source.xml'))
     $title = $xml->page[$pageNumber]->title;
 } else {
     echo 'Pas de fichier source.xml';
-    exit();
 }
 ?>
 
