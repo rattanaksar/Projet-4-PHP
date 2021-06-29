@@ -2,11 +2,21 @@
 if (file_exists('source.xml')) 
 {
     $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
-    if (isset($_GET['id'])) {
-        $idNumber = intval(htmlspecialchars($_GET['id'])); //intval — Retourne la valeur numérique entière équivalente d'une variable
-        $pageNumber = intval( $idNumber) -1;
-    } else {
-        $pageNumber = 0;
+    $pageNumberMax= count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
+    $pageNumber= 0;
+    $title='Ocordo';
+    if (isset($_GET['id'])) 
+    {
+        $idNumber = htmlspecialchars($_GET['id']);
+        for ($i = 0; $i < $pageNumberMax; $i++)
+        {
+            if ($xml->page[$i]['id'] == $idNumber)
+            {
+                $pageNumber= $i;
+                break;
+            }
+        }
+        $title = $xml->page[$pageNumber]->title;
     }
     $pageNumberMax = count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
     if ($pageNumber >= $pageNumberMax) {
