@@ -22,8 +22,7 @@ if (file_exists('source.xml'))
 } 
 else 
 {
-    echo 'Pas de fichier source.xml';
-    exit();
+    exit('Pas de fichier source.xml');
 }
 ?>
 
