@@ -1,4 +1,5 @@
 RewriteEngine On
-#FallbackResource /index.php
-#ErrorDocument 404 /404.php
+# Disable directory browsing
+Options -Indexes
+# Translate xx.html to id=xx
 RewriteRule ^([a-zA-Z0-9]*).html$ /index.php?id=$1 [L]

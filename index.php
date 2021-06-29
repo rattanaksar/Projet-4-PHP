@@ -8,9 +8,8 @@ if (file_exists('source.xml'))
     $title='Ocordo';
     if (isset($_GET['id'])) 
     {
-        $idNumber = intval(htmlspecialchars($_GET['id']));
-        $pageNumber= $idNumber -1;
-        $title = $xml->page[$pageNumber]->title;
+        $idNumber = htmlspecialchars($_GET['id']);
+        $pageNumber= intval($idNumber) -1;
     }
     $pageNumberMax = count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
     if ($pageNumber >= $pageNumberMax) {
