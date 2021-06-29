@@ -8,8 +8,8 @@ if (file_exists('source.xml'))
     $title='Ocordo';
     if (isset($_GET['id'])) 
     {
-        $idNumber = htmlspecialchars($_GET['id']);
-        $pageNumber= sprintf('%d',$idNumber) -1;
+        $idNumber = intval(htmlspecialchars($_GET['id']));
+        $pageNumber= $idNumber -1;
         $title = $xml->page[$pageNumber]->title;
     }
     else
@@ -51,9 +51,9 @@ if (file_exists('source.xml'))
         for ($i = 0; $i < $pageNumberMax; $i++) 
         {
             $menu = $xml->page[$i]->menu; 
-            $idValue= $xml->page[$i]['id']; ?>
+            ?>
             <div class="collapse navbar-collapse" id="navbarToggler">
-                <a class="nav-link text-secondary ms-5" href="<?= $idValue ?>.html"><?= $menu ?></a>
+                <a class="nav-link text-secondary ms-5" href="<?= $xml->page[$i]['id'] ?>.html"><?= $menu ?></a>
             </div>
         <?php
         } 
