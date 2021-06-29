@@ -1,18 +1,24 @@
 <?php
 if (file_exists('source.xml')) {
     $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
-    if (isset($_GET['page'])) {
-        $pageNumber = intval(htmlspecialchars($_GET['page'])); //intval — Retourne la valeur numérique entière équivalente d'une variable
-    } else {
-        $pageNumber = 0;
+    $pageNumberMax= count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
+    $pageNumber= 0;
+    if (isset($_GET['id'])) 
+    Z{
+        $idNumber = htmlspecialchars($_GET['id']);
+        for ($i = 0; $i < $pageNumberMax; $i++)
+        {
+            if ($xml->page[$i]['id'] == $idNumber)
+            {
+                $pageNumber= $i;
+                break;
+            }
+        }
+        $title = $xml->page[$pageNumber]->title;
     }
-    $pageNumberMax = count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
-    if ($pageNumber >= $pageNumberMax) {
-        echo 'Numéro de page inconnu';
-    }
-    $title = $xml->page[0]->title;
 } else {
     echo 'Pas de fichier source.xml';
+    exit();
 }
 ?>
 
@@ -23,7 +29,7 @@ if (file_exists('source.xml')) {
     <meta charset="utf-8" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
-    <title><?= $title; ?></title>
+    <title><?= $title ?></title>
 </head>
 
 <body>
@@ -40,7 +46,7 @@ if (file_exists('source.xml')) {
         for ($i = 0; $i < $pageNumberMax; $i++) {
             $menu = $xml->page[$i]->menu; ?>
             <div class="collapse navbar-collapse" id="navbarToggler">
-                <a class="nav-link text-secondary ms-5" href="index.php?page=<?= $i ?>"><?= $menu ?></a>
+                <a class="nav-link text-secondary ms-5" href="<?= $xml->page[$i]['id'] ?>.html"><?= $menu ?></a>
             </div>
         <?php
         } ?>
