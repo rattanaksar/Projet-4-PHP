@@ -1,8 +1,9 @@
 <?php
 if (file_exists('source.xml')) {
     $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
-    if (isset($_GET['page'])) {
-        $pageNumber = intval(htmlspecialchars($_GET['page'])); //intval — Retourne la valeur numérique entière équivalente d'une variable
+    if (isset($_GET['id'])) {
+        $idNumber = intval(htmlspecialchars($_GET['id'])); //intval — Retourne la valeur numérique entière équivalente d'une variable
+        $pageNumber = intval( $idNumber) -1;
     } else {
         $pageNumber = 0;
     }
@@ -10,7 +11,7 @@ if (file_exists('source.xml')) {
     if ($pageNumber >= $pageNumberMax) {
         echo 'Numéro de page inconnu';
     }
-    $title = $xml->page[0]->title;
+    $title = $xml->page[$pageNumber]->title;
 } else {
     echo 'Pas de fichier source.xml';
 }
