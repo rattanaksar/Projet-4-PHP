@@ -13,6 +13,7 @@ if (file_exists('source.xml'))
     $pageNumberMax = count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
     if ($pageNumber >= $pageNumberMax) {
         echo 'Numéro de page inconnu';
+        exit();
     }
     $title = $xml->page[$pageNumber]->title;
 } else {
