@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <website>
-	<page id="a1">
+	<page id="1">
 		<menu>
 			Accueil
 		</menu>
@@ -41,7 +41,7 @@
 			]]>
 		</content>
 	</page>
-	<page id="b2">
+	<page id="2">
 		<menu>
 			Qui sommes nous?
 		</menu>
@@ -100,7 +100,7 @@
 			]]>
 		</content>
 	</page>
-	<page id="c3">
+	<page id="3">
 		<menu>
 			Nos clients témoignent
 		</menu>
@@ -137,7 +137,7 @@
 			]]>
 		</content>
 	</page>
-	<page id="d4">
+	<page id="4">
 		<menu>
 			Contact
 		</menu>
