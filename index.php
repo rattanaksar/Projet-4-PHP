@@ -1,63 +1,71 @@
 <?php
-define('XML_SOURCE_FILE','source.xml');
+session_start();
+if (file_exists('source.xml')) 
+{
+     $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
+    $pageNumberMax= count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
+    $pageNumber= 0;
+    $title='Ocordo';
+    if (isset($_GET['id'])) 
+    {
+        $idNumber = htmlspecialchars($_GET['id']);
+        if (isset($_SESSION[$idNumber]))
+        {
+            $pageNumber= $_SESSION[$idNumber];
+        }
+        $title = $xml->page[$pageNumber]->title;
+    }
+    else
+    {
 
-// Le fichier source DOIT être accessible
-if (file_exists(XML_SOURCE_FILE)) 
-{
-    // Si page est présent c'est que l'utilisateur à cliquer sur une option
-    if (isset($_GET['page']))
-    {
-        $pageNumber= intval(htmlspecialchars($_GET['page']));
-    } 
-    else 
-    {
-        // C'est la première fois que le script est lancé. On prend la page d'acceuil par défaut
-        $pageNumber= 0;
     }
-    // Lecture du fichier XML
-    $xmlFile= simplexml_load_file(XML_SOURCE_FILE);
-    // En extraire le numbre de pages
-    $pageNumberMax= count($xmlFile->page);
-    if ($pageNumber >= $pageNumberMax)
-    {
+    $pageNumberMax = count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
+    if ($pageNumber >= $pageNumberMax) {
         echo 'Numéro de page inconnu';
-        exit();        
     }
-    // préparons le titre de la page qui sera affiché
-    $title= $xmlFile->page[$pageNumber]->title;
-}
-else
-{
-    // Oops !
+    $title = $xml->page[$pageNumber]->title;
+} else {
     echo 'Pas de fichier source.xml';
     exit();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="/assets/css/style.css" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <title><?= $title; ?></title>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            </button>
-            <?php
-                for ($i = 0; $i != $count; $i++)
-                {
-                    $menu = $xmlFile->page[$i]->menu;
-                    $display= '<a class="nav-link ml-5" href="index.php?page='.$i.'">'.$menu.'</a>';
-                    echo $display;
-                }
-            ?>        
-        </nav>
-        <!-- Affichage du contenu correspondant à la page souhaitée -->
-        <div class="container content-page">
-            <?= $xml->page[$pageIdx]->content; ?>
-        </div>
+
+<head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title><?= $title ?></title>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-light navbar-expand-lg mb-5 fs-5" style="background-image: linear-gradient(to right, #F09819 0%, #EDDE5D  51%, #F09819  100%);">
+
+        <a class="navbar-brand ms-5" href="index.php?page=0">
+            <img src="assets/img/logo.png" alt="logo Ocordo" width="100" height="100">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- on génère les différentes pages du site -->
+        <?php
+        for ($i = 0; $i < $pageNumberMax; $i++) {
+            $menu = $xml->page[$i]->menu; 
+            $idValue= $xml->page[$i]['id']; ?>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <a class="nav-link text-secondary ms-5" href="<?= $idValue ?>.html"><?= $menu ?></a>
+            </div>
+        <?php
+        $_SESSION[sprintf('%s',$idValue)]= $i;
+        } 
+        ?>
+    </nav>
+    <div class=" container content-page">
+        <?= $xml->page[$pageNumber]->content; ?>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
+
 </html>
