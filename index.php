@@ -1,10 +1,11 @@
 <?php
-if (file_exists('source.xml')) {
+if (file_exists('source.xml')) 
+{
     $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
     $pageNumberMax= count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
     $pageNumber= 0;
     if (isset($_GET['id'])) 
-    Z{
+    {
         $idNumber = htmlspecialchars($_GET['id']);
         for ($i = 0; $i < $pageNumberMax; $i++)
         {
