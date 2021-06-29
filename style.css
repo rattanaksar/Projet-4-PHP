@@ -1,24 +1,33 @@
-.defaut_bg_color
-{
-    color:#ED8105;
+body {
+    font-family: 'Comfortaa', cursive;
 }
-.default_video_width
-{
+
+h1,
+h2,
+h3 {
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+.defaut_bg_color {
+    color: #ED8105;
+}
+
+.default_video_width {
     width: 400px;
 }
-.default_card_color
-{
-    color:#EE9741;
+
+.default_card_color {
+    color: #EE9741;
 }
-.default_card_header
-{
-    background-color:#F7B755;
+
+.default_card_header {
+    background-color: #F7B755;
 }
-.default_banner_color
-{
-    color:linear-gradient(62deg, #FBAB7E 0%, #F7CE68 66%);
+
+.default_banner_color {
+    color: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 66%);
 }
-.default_bg_color
-{
-    background-image: linear-gradient(to right, #F09819 0%, #EDDE5D  51%, #F09819  100%);
+
+.default_bg_color {
+    background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
 }

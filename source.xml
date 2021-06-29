@@ -9,7 +9,7 @@
 		</title>
 		<content>
 			<![CDATA[
-			<h1 class="text-center py-4 default_banner_color">Maçonnerie Ocordo</h1>
+			<h1 class="text-center py-4 defaut_bg_color fw-lighter">Maçonnerie Ocordo</h1>
 			<p class="lead my-4">Nous sommes un groupement permanent d’entreprises locales du bâtiment spécialisées dans les travaux de rénovation de maisons et de construction d’extensions horizontales ou verticales de maisons.</p>
 			<p class="lead">Nous sommes capables de gérer un projet de rénovation ou d’extension de A à Z grâce à nos entreprises générales de bâtiment partenaires.</p>
 			<p class="lead mb-5">Nous pouvons assurer tous vos travaux de tout corps d’état.</p>
@@ -37,7 +37,6 @@
 			<img src="assets/img/societe-de-renovation-a-nantes-2.jpg" alt="Rénovation d'un appartement à Nantes"/>
 			<p class="caption-text fst-italic">Rénovation d'un appartement à Nantes</p>
 			</div>
-
 			]]>
 		</content>
 	</page>
@@ -50,7 +49,7 @@
 		</title>
 		<content>
 			<![CDATA[
-			<h1 class="text-center py-4 defaut_bg_color">Qui sommes-nous?</h1>
+			<h1 class="text-center py-4 defaut_bg_color fw-lighter">Qui sommes-nous?</h1>
 			<h2 class="text-center py-5">L’AGENCE DE TRAVAUX OCORDO</h2>
 			<h3 class="fs-2 defaut_bg_color">Présentation de notre entreprise</h3>
 			<p class="lead ">Nous sommes un groupement permanent d’entreprises locales du bâtiment spécialisées dans les travaux de rénovation d’appartements et de maisons et de construction d’extensions horizontale ou verticale de maisons.</p><p class="lead mb-5 fst-italic fw-bolder default_card_color">
@@ -58,7 +57,7 @@
 			<div class="mx-auto default_video_width"><p><iframe src="https://www.youtube.com/embed/Crh5lFpNK0o?feature=oembed" allowfullscreen="" width="500" height="281" frameborder="0"></iframe></p></div>
 			<hr class="mt-5 defaut_bg_color">
 			<div class="container-fluid my-5">
-			<div class="row">
+			<div class="row ">
 			<p class="lead text-center card-header p-3 default_card_color">Notre groupement est en mesure de vous proposer les compétences métier dans le gros oeuvre et le second oeuvre :</p>
 			<div class="card col p-3">
 			<ul class="list-group list-group-flush">
@@ -109,7 +108,7 @@
 		</title>
 		<content>
 			<![CDATA[
-			<h1 class="text-center py-4 defaut_bg_color">Nos clients témoignent</h1>
+			<h1 class="text-center py-4 defaut_bg_color fw-lighter">Nos clients témoignent</h1>
 			
 			<div class="card my-5">
 			<div class="card-header default_card_header">
@@ -145,7 +144,7 @@
 		</title>
 		<content>
 			<![CDATA[
-			<h1 class="text-center py-4 defaut_bg_color">Contact et Devis</h1>
+			<h1 class="text-center py-4 defaut_bg_color fw-lighter">Contact et Devis</h1>
 			<div class="mx-auto mb-5" style="width: 600px;">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10840.441212216989!2d-1.562078!3d47.214424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x10a23dc1d980bca7!2sOcordo+Travaux+Nantes!5e0!3m2!1sfr!2sfr!4v1434122059096" width="600" height="450" frameborder="2"></iframe>
 			</div>

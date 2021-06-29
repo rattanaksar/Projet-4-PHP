@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="container-fluid mx-auto" style="width: 800px;">
+    <div class="container-fluid mx-auto my-5" style="width: 800px;">
         <div class="card text-center border-warning" style="width: 50rem">
             <h1 class="card-header" style="background-color: #FFCA2C">ERROR 404</h1>
             <div class="card-body">
