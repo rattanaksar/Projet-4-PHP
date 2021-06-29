@@ -1,5 +1,6 @@
 <?php
-if (file_exists('source.xml')) {
+if (file_exists('source.xml')) 
+{
     $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
     if (isset($_GET['id'])) {
         $idNumber = intval(htmlspecialchars($_GET['id'])); //intval — Retourne la valeur numérique entière équivalente d'une variable
@@ -14,6 +15,7 @@ if (file_exists('source.xml')) {
     $title = $xml->page[$pageNumber]->title;
 } else {
     echo 'Pas de fichier source.xml';
+    exit();
 }
 ?>
 
@@ -24,7 +26,7 @@ if (file_exists('source.xml')) {
     <meta charset="utf-8" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
-    <title><?= $title; ?></title>
+    <title><?= $title ?></title>
 </head>
 
 <body>
@@ -41,7 +43,7 @@ if (file_exists('source.xml')) {
         for ($i = 0; $i < $pageNumberMax; $i++) {
             $menu = $xml->page[$i]->menu; ?>
             <div class="collapse navbar-collapse" id="navbarToggler">
-                <a class="nav-link text-secondary ms-5" href="index.php?page=<?= $i ?>"><?= $menu ?></a>
+                <a class="nav-link text-secondary ms-5" href="<?= $xml->page[$i]['id'] ?>.html"><?= $menu ?></a>
             </div>
         <?php
         } ?>
