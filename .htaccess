@@ -19,5 +19,5 @@ RewriteRule \.(gif|jpg|jpeg|bmp)$ - [F]
 #?Deny from all
 #?Satisfy all
 #?</Files>
-# Translate xx.html to id=xx
+# Translate site/xx.html to site/index.php?id=xx
 RewriteRule ^([a-zA-Z0-9]*).html$ /index.php?id=$1 [L]
