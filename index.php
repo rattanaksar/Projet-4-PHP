@@ -13,6 +13,11 @@ if (file_exists('source.xml'))
             $pageNumber= 0;
         }
     }
+    else
+    {
+        // page html bidouillée... Force la page d'acceuil !
+        $pageNumber= 0;
+    }
     $title = $xml->page[$pageNumber]->title;
 } 
 else 
