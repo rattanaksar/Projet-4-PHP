@@ -1,7 +1,5 @@
 <?php
 if (file_exists('source.xml')) {
-    /* autre solution : 
-    header('Location: /Error404.php', TRUE, 404);*/
     $xml = simplexml_load_file('source.xml'); //simplexml_load_file — Convertit un fichier XML en objet
     $pageNumberMax = count($xml->page); // La fonction count() compte les enfants d'un nœud spécifié.
     if (isset($_GET['id'])) {
@@ -10,9 +8,8 @@ if (file_exists('source.xml')) {
 
         // cas de figure où la page recherchée n'existe pas
         if ($pageNumber >= $pageNumberMax) {
-            http_response_code(404);
-            include("Error404.php");
-            $pageNumber = 0;
+            //http_response_code(404);
+            header('Location: Error404.php', TRUE, 404);
             exit(); // on sort de ce cas de figure
         }
     } else {
@@ -52,10 +49,10 @@ if (file_exists('source.xml')) {
         </button>
         <!-- on génère les différentes pages du site -->
         <?php
-        for ($i = 0; $i < $pageNumberMax; $i++) {
-            $menu = $xml->page[$i]->menu; ?>
+        for ($pageId = 0; $pageId < $pageNumberMax; $pageId++) {
+            $menu = $xml->page[$pageId]->menu; ?>
             <div class="collapse navbar-collapse" id="navbarToggler">
-                <a class="nav-link text-dark ms-5" href="<?= $xml->page[$i]['id'] ?>.html"><?= $menu ?></a>
+                <a class="nav-link text-dark ms-5" href="<?= $xml->page[$pageId]['id'] ?>.html"><?= $menu ?></a>
             </div>
         <?php
         } ?>
