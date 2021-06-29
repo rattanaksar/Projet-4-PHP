@@ -1,4 +1,9 @@
 RewriteEngine On
 #FallbackResource /index.php
+<<<<<<< HEAD
 RewriteRule ^([a-zA-Z0-9]*).html$ /index.php?id=$1 [L]
 ErrorDocument 404 /Projet-4-PHP/Error404.php
+=======
+#ErrorDocument 404 /404.php
+RewriteRule ^([a-zA-Z0-9]*).html$ /index.php?id=$1 [L]
+>>>>>>> GY
